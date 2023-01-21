@@ -1,3 +1,84 @@
 body {
-  background-color: antiquewhite;
+  background-color: #272B33;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.character {
+  font-family: sans-serif;
+  color: white;
+}
+.character__section {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 50px;
+}
+.character__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+@media (max-width: 900px) {  
+  .character__grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.character__card {
+  display: flex;
+  flex-direction: row;
+  background-color: #3C3E44;
+  border-radius: 15px;
+}
+.character__picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px 0px 0px 15px;
+}
+.character__information{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
+.character__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.character__status {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;  
+}
+.character__alive-meter {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: grey;
+
+  &--alive {
+    background-color: greenyellow;
+  }
+  &--dead {
+    background-color: red;
+  }
+}
+.character__h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.character__text-alive-and-species {
+  font-size: 0.875rem;
+  font-weight: 550;
+}
+.character__helper-text {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: rgb(136, 136, 136);
+}
+.character__text-h3 {
+  font-size: 1rem;
+  font-weight: 200;
 }
